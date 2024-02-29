@@ -27,6 +27,8 @@ image_2 = cv2.cvtColor(image_2, cv2.COLOR_BGR2RGB)
 result2 = app.get(image_2)
 embeding2 = result2[0]["embedding"]
 
+
+
 if np.sqrt(np.sum((embeding1 - embeding2)**2))<25:
     out = pyfiglet.figlet_format("same")
     print(out)
