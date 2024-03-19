@@ -1,3 +1,5 @@
+import gtts
+
 def read_text_file():
     global words_bank
     file = open("translate.txt","r")
@@ -10,25 +12,33 @@ def read_text_file():
         my_dic = {"en": temp[i] ,"fa":temp[i+1]}
         words_bank.append(my_dic)
 
-    file.close()
+    file.close() 
+
+def add_to_file():
+    en=input("Enter English Word : ")   
+    fa=input("Enter Translated Word Persian : ")    
+    file = open('translate.txt', 'a') 
+    file.write("\n")
+    file.write(en) 
+    file.write("\n")
+    file.write(fa)
+    file.close() 
 
 def translate_english_to_persian():
     user_text = input("Enter Yor English Word :")
-
     user_words = user_text.split(" ")
-    output=""
-
+    output= ""
     for user_word in user_words:
         for word in words_bank:
             if user_word == word["en"]:
-                output = output+word["fa"]+ " "
+                output = output + word["fa"]+ " "
                 break
-
         else:
             output = output + user_word + " "  
-            
+    voice = gtts.gTTS(output , lang = "ar" , slow = False )
+    voice.save("voice1.mp3")        
     print(output)  
-
+    
 def translate_persian_to_english():
 
     user_text = input("Enter Yor Persian Word :")
@@ -46,16 +56,8 @@ def translate_persian_to_english():
             output=output + user_word + " "  
             
     print(output) 
-
-def add_to_file():
-    en=input("Enter English Word : ")   
-    fa=input("Enter Translated Word Persian : ")    
-    file = open('translate.txt', 'a') 
-    file.write("\n")
-    file.write(en) 
-    file.write("\n")
-    file.write(fa)
-    file.close() 
+    sound = gtts.gTTS(output , lang = "en" , slow = False )
+    sound.save("voice2.mp3")
 
 def show_menu():
     print("🎀  welcome  🎀")
@@ -63,6 +65,8 @@ def show_menu():
     print("2️⃣   Translate persian To English")
     print("3️⃣   Add new word to database ")
     print("4️⃣   Exit")
+
+
 
 read_text_file()  
 while True:

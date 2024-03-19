@@ -218,3 +218,5 @@ cucamber
 khiar
 eat
 khord
+happy
+shad
