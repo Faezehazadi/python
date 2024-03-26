@@ -7,7 +7,7 @@ from khayyam import JalaliDate
 import gtts
 import qrcode
 
-bot=telebot.TeleBot("6550594256:AAEiWOAlw0vPeVQEeeAocXFNH7_vmuCV4cI",parse_mode=None)
+bot=telebot.TeleBot("",parse_mode=None)
 game_number = None  
 flag=None
 win=False
