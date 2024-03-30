@@ -7,7 +7,7 @@ Properties are an object-oriented idiom.
 methods are functions associated with a specific object or class and are utilized to perform particular assignments.
 
 ### fraction class
-sum = the sum function can add 2 fractions .
+sum = the sum function can add 2 fractions.
 sub = the sub function can subtracts 2 fractions.
 mul = the mul function can multiplies 2 fractions.
 div = the div function can divides 2 fractions.
