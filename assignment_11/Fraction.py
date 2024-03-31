@@ -43,11 +43,31 @@ class Fraction:
         print(self.s, "/", self.m)
 
 
+n_1 = int(input("🔸 enter first numerator:"))
+d_1 = int(input("🔸 enter first demoniator:"))
 
-f1 = Fraction(3, 1)
+n_2 = int(input("🔸 enter second numerator:"))
+d_2 = int(input("🔸 enter second demoniator:"))
+
+f1 = Fraction(n_1, d_1)
+print("Fraction 1️⃣ ")
 f1.show()
-f2 = Fraction(7,3)
+
+f2 = Fraction(n_2, d_2)
+print("Fraction 2️⃣ ")
 f2.show()
+
 x = f1.sum(f2)
+print("Sum: ")
 x.show()
-f1.simplifying()
+
+y = f1.sub(f2)
+print("Sub: ")
+y.show()
+
+z = f1.mul(f2)
+print("Mul: ")
+z.show()
+
+print("Simplifying: ")
+w = f1.simplifying()

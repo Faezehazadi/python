@@ -26,13 +26,28 @@ class Complex:
         print (self.real , "+", self.imaginary,"i")
 
 
-x = Complex (3,1)
+r_1 = int(input("🔸 enter first real:"))
+i_1 = int(input("🔸 enter first imaginary:"))
+
+r_2 = int(input("🔸 enter second real:"))
+i_2 = int(input("🔸 enter second imaginary:")) 
+
+x = Complex (r_1, i_1)
+print("complex number  1️⃣ ")
 x.show()
-y = Complex (7,3)
+
+y = Complex (r_2, i_2)
+print("complex number  2️⃣ ")
 y.show()
+
 z = x.sum (y)
+print("Sum: ")
 z.show()
+
 z = x.sub (y)
+print("Sub: ")
 z.show()
+
 z = x.mul (y)
+print("Mul: ")
 z.show()
