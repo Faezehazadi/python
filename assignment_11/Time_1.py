@@ -1,65 +1,73 @@
 class Time:
-    def __init__(self , hh, mm, ss):
+    def __init__(self, hh, mm, ss):
         self.hour = hh
         self.minute = mm
         self.second = ss
         self.fix()
 
-    def show(self):
-        print(self.hour ,":" , self.minute ,":", self.second)
 
-    def sum(self , other):
+    def sum(self, other):
         s_new = self.second + other.second
         m_new = self.minute + other.minute
         h_new = self.hour + other.hour
-        result = Time(h_new , m_new , s_new)
+        result = Time(h_new, m_new, s_new)
         return result
-    
 
-    def sub(self , other):
+
+    def sub(self, other):
         s_new = self.second - other.second
         m_new = self.minute - other.minute
         h_new = self.hour - other.hour
-        result = Time(h_new , m_new , s_new)
+        result = Time(h_new, m_new, s_new)
         return result
     
 
-    def second_to_time(self,second):
-        Calculated_HOUR=second//3600
-        b=second-3600*Calculated_HOUR
-        Calculated_MINUTE=b//60
-        Calculated_SECOND=b-60*Calculated_MINUTE
-        result=Time(Calculated_HOUR,Calculated_MINUTE,Calculated_SECOND)
+    def second_to_time(self):
+        while self.second >= 60:
+            self.second -= 60
+            self.minute += 1
+            while self.minute >= 60:
+                self.minute -= 60
+                self.hour += 1
+        result = Time(self.hour, self.minute, self.second)
         return result
     
-    def time_to_second(self, other):
-        Calculated_SECOND= other.hour*3600 + other.minute*60 + other.second
-        result=Calculated_SECOND
+
+    def time_to_second(self):
+        self.second = self.hour * 3600 + self.minute * 60 + self.second
+        result = self.second
         return result
+    
 
     def gmt_to_tehran(self):
-        t=Time(3, 30, 0)
-        tehran_time=self.sum(t)
-        return tehran_time
+        tehran_h = self.hour + 3
+        tehran_m = self.minute + 30
+        tehran_s = self.second
+        result = Time(tehran_h, tehran_m, tehran_s)
+        return result
     
 
-    def fix(self):
+    def show(self):
+        print (self.hour, ":", self.minute, ":", self.second)
 
+
+    def fix(self):
         if self.second >= 60:
             self.second -= 60
-            self.minute +=1
+            self.minute += 1
 
         if self.minute >= 60:
             self.minute -= 60
-            self.hour +=1
-
+            self.hour += 1
+            
         if self.minute < 0:
             self.minute += 60
-            self.hour -= 1
+            self.hour -= 1    
 
         if self.second < 0:
             self.second += 60
             self.minute -= 1
+
 
 
 h_1 = int(input("🔸 enter first hour:"))
@@ -83,12 +91,14 @@ t3 = t1.sum(t2)
 print("Sum:")
 t3.show()
 
-tehran_time=t1.gmt_to_tehran()
-print("Sum:")
+t4 = t1.second_to_time()
+print("Second_to_time:")
+t4.show()
+
+t5=t2.time_to_second()
+print("Time_to_second:")
+print(t5)
+
+tehran_time = t1.gmt_to_tehran()
+print("Gmt_to_tehran:")
 tehran_time.show()
-
-seconds=tehran_time.time_to_second()
-print("Seconds : ", seconds)
-
-time=Time.seconds_to_time(5600) 
-time.show()
