@@ -26,4 +26,4 @@ can sum, sub, mul, show 2 complex numbers.
 ### rug
 print n*n rug.
 
-![screen shot](rug\rug_result.png)
+![screen shot](assignment_11\Rug\rug_result.png)
