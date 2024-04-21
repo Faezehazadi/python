@@ -1,6 +1,6 @@
 
 import pytube
-
+video = []
 class Media:
     def __init__(self,type,name,director,imdb_score,url,duration,actor):
         self.type = type
@@ -11,7 +11,9 @@ class Media:
         self.duration = duration
         self.actor = actor 
 
-def download(self):
-    link = self.url
-    fs = pytube.YouTube(link).streams.first()
-    fs.download(output_path='./', filename = 'test.mp4')
+def download():
+    for obj in video:
+        if obj.name == media_name:
+            first_stream = YouTube(obj.url)
+
+

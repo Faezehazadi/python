@@ -25,7 +25,8 @@ time_to_second = it can convert time to seconds.
 onvert_to_timeZone = converts GMT time to Tehran time.
 
 #### how to run
-time_1.py
+python time_1.py
+
 
 
 ## complex class

@@ -108,12 +108,15 @@ def search_media():
     else:
          print("🔶 This Media dose not exist.")
          
-def download():
-    user_input = input("🔶 Enter name of media: ") 
-    for obj in video:
-        if obj['name'] == user_input: 
-            obj.download()
-            print("done ✔ ")  
+# def download():
+    # user_input = input("🔶 Enter name of media: ") 
+    # for i in range (len(video)):
+    #     if video[i].name == user_input: 
+    #         video[i].download()
+    #         print("done ✔ ") 
+    # user_input = input("🔶 Enter name of media: ")
+    # obj.download(user_input) 
+  
 
          
 def show_media(): 
