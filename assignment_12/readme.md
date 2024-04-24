@@ -25,8 +25,8 @@ Save & Exit: Saves the changes and exit.
 ```
 pip install pytube
 pip install tabulate
-After installing the libraries, you can set up the app by running the Python file.
 ```
 
 ## How to Run
+
 python main.py
