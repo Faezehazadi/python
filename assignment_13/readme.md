@@ -14,9 +14,9 @@ python main.py
 python Complexloop.py
 
 ### Interstellar
-![screen shot](interstellar.png)
+![screen shot](pic/interstellar.png)
 
 ### Complex Loop
-![screen shot](complexloop.png)
+![screen shot](pic/complexloop.png)
 
 
