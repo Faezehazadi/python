@@ -8,7 +8,7 @@ from snake import Snake
 
 class Game(arcade.Window):
     def __init__(self):
-        super().__init__(width=500, height=500, title="  Blak and White Snake 🎮 ")
+        super().__init__(width=500, height=500, title="  Black and White Snake 🎮 ")
         arcade.set_background_color(arcade.color.KHAKI)
         self.flower = Flower(self)
         self.leaf = Leaf(self)
