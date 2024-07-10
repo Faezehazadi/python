@@ -6,7 +6,7 @@ class Ball(arcade.Sprite):
         super().__init__()
         self.color = arcade.color.BANANA_YELLOW
         self.radious = 12
-        self.speed = 5
+        self.speed = 2
 
         self.center_x = game.width//2
         self.center_y = game.height//2
