@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QApplication, QMessageBox
 from PySide6.QtUiTools import QUiLoader
 
 def about():
-    msg_box = QMessageBox(windowTitle="about Tic-tac-toe game", text="Tic Tac Toe is an exciting two player game. If you align 3 pieces in a row you will win the game.")
+    msg_box = QMessageBox(windowTitle="about Tic-tac-toe game", text="TicTacToe is an exciting two player game. If you align 3 pieces in a row you will win the game.")
     msg_box.exec()
 
 #clear the button's text 
@@ -113,3 +113,5 @@ main_window.rbtn_player_vs_player.pressed.connect(partial(mode, "player1_player2
 main_window.rbtn_player_vs_cpu.pressed.connect(partial(mode, "player_cpu"))
 
 app.exec()
+
+#state?
