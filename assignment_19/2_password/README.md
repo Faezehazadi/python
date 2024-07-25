@@ -13,4 +13,4 @@ python main.py
 
 
 ### picture
-![screen shot](pic/game2.png)
+![screen shot](password.png)

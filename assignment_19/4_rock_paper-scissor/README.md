@@ -14,4 +14,4 @@ python main.py
 
 
 ### picture
-![screen shot](pic/game4.png)
+![screen shot](rps.png)

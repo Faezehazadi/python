@@ -13,4 +13,4 @@ python main.py
 
 
 ### picture
-![screen shot](pic/game3.png)
+![screen shot](guess_num.png)
