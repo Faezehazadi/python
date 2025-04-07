@@ -1,6 +1,0 @@
-sentence = input("enter the sentence: ") 
-i = 1
-for char in sentence :
-    if char == ' ':
-        i += 1
-print("The number of words in a sentence: ", i)
