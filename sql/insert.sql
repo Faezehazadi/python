@@ -1,1 +1,0 @@
-INSERT INTO Customers ( id , name , city , country ) VALUES ( 30 , "faezeh" , "Tabriz" , "Iran" )
